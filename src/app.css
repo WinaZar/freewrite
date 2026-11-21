@@ -1,0 +1,35 @@
+:root {
+  --bg: #faf9f6;
+  --text: #1f1e1c;
+  --muted: #8a877f;
+  --ember: #c4501b;
+
+  color-scheme: light dark;
+  font-family: 'Inter Freewrite', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161615;
+    --text: #e7e4dc;
+    --muted: #77746d;
+    --ember: #f0783c;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+}
