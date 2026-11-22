@@ -100,8 +100,8 @@
     <span class="unit">min</span>
   {:else}
     <span class="clock">{clock}</span>
-    <button onmousedown={keepFocus} onclick={onExtend} title="⌘+">Extend</button>
-    <button onmousedown={keepFocus} onclick={onBurn} title="⌘↩">Burn</button>
+    <button onmousedown={keepFocus} onclick={onExtend}>Extend <kbd>⌘+</kbd></button>
+    <button onmousedown={keepFocus} onclick={onBurn}>Burn <kbd>⌘↩</kbd></button>
   {/if}
 </div>
 
@@ -160,6 +160,11 @@
   button.selected {
     opacity: 1;
     color: var(--text);
+  }
+
+  kbd {
+    font: inherit;
+    opacity: 0.6;
   }
 
   .unit {
